@@ -13,7 +13,7 @@ function App() {
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/product/:id" element={<ShowProductById />} />
-            <Route path='*' element={<NotFound />} />
+            {/* <Route path='*' element={<NotFound />} /> */}
           </Routes>
         </BrowserRouter>
       </div>
