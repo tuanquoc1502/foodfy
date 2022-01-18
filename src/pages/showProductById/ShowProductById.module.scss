@@ -1,0 +1,172 @@
+.wapper {
+    display: flex;
+    padding-top: 30px;
+}
+
+.leftProduct {
+    margin-right: 50px;
+    width: 50%;
+
+    .imgProduct {
+        max-width: 541px;
+        max-height: 500px;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 5px;
+    }
+}
+
+.rightProduct {
+    width: 50%;
+
+    .nameProduct {
+        font-size: 31px;
+        font-weight: 700;
+    }
+
+    .starIcon {
+        padding: 20px 0;
+        display: flex;
+        align-items: center;
+
+        svg {
+            font-size: 15px;
+            fill: rgb(251, 180, 3);
+        }
+
+        .evaluate {
+            margin-left: 10px;
+            font-size: 15px;
+        }
+    }
+
+    .price {
+        color: #ff514e;
+        font-size: 24px;
+        font-weight: 800;
+    }
+
+    .origin {
+        display: flex;
+        font-size: 15.5px;
+        padding: 20px 0;
+        font-weight: 400;
+
+        .country {
+            padding-right: 5px;
+            opacity: 0.7;
+        }
+    }
+
+    .eatOut {
+        font-size: 15.5px;
+        font-weight: 400;
+    }
+
+    .optionsTitle {
+        padding: 20px 0 10px 0;
+        font-size: 21px;
+        font-weight: 700;
+    }
+
+    .options {
+        font-size: 1.5rem;
+        border-bottom: 1px solid #ebebeb;
+
+        li {
+            display: flex;
+            align-items: center;
+
+            padding: 10px 0;
+
+            input {
+                margin: 0;
+                margin-right: 5px;
+            }
+
+            &:last-child {
+                padding-bottom: 30px;
+            }
+        }
+    }
+
+    .order {
+        display: flex;
+        margin-top: 25px;
+        align-items: center;
+        border-bottom: 1px solid #ebebeb;
+        padding-bottom: 30px;
+
+        -webkit-user-select: none;
+        user-select: none;
+
+        .btnPrev {
+            font-size: 15px;
+            font-weight: 700;
+            background: #f2f2f2;
+            border-radius: 50%;
+            width: 38px;
+            height: 38px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .quantily {
+            font-size: 15px;
+            margin: 0 15px;
+        }
+
+        .btnNext {
+            font-size: 15px;
+            margin-right: 35px;
+            font-weight: 700;
+            background: #f2f2f2;
+            border-radius: 50%;
+            width: 38px;
+            height: 38px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .addToCard {
+            font-size: 15px;
+            background: #ff514e;
+            padding: 9px 60px;
+            border-radius: 20px;
+            cursor: pointer;
+            color: white;
+            display: flex;
+            align-items: center;
+
+            .cartIcon {
+                margin-right: 5px;
+                font-weight: 700;
+                font-size: 17px;
+            }
+        }
+    }
+
+    .detailCommits {
+        font-size: 15px;
+        line-height: 20px;
+        margin-top: 20px;
+
+        .detailCommitsIcon {
+            border-left: 3px solid #ff514e;
+            margin: 15px 0;
+            display: flex;
+            align-items: center;
+        }
+        
+        svg {
+            color: #ff514e;
+            margin: 0 7px;
+            font-size: 25px;
+        }
+    }
+}

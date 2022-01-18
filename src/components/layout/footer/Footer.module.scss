@@ -1,0 +1,195 @@
+.footerTop {
+    margin-top: 80px;
+    // background: rgb(212, 204, 204);
+    padding: 25px 0;
+    background: #ffff;
+    border-top: 1px solid #ff702a;
+}
+
+.topContent {
+    .describeTop {
+        padding: 10px 0;
+        font-size: 1.7rem;
+        font-weight: 600;
+        line-height: 20px;
+    }
+
+    .describeBottom {
+        color: rgb(255, 112, 42);
+        font-size: 1.7rem;
+        font-weight: 600;
+    }
+
+    .iconSocialNetwork {
+        display: flex;
+        padding: 25px 0;
+
+        .icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            margin-right: 20px;
+            padding: 7.5px 8.5px;
+
+            color: rgb(236, 95, 149);
+            background: rgb(255, 223, 225);
+            border-radius: 5px;
+            cursor: pointer;
+
+            &:hover {
+                opacity: 0.8;
+            }
+
+            svg {
+                font-size: 23px;
+            }
+        }
+
+        .icon:first-child,
+        .icon:last-child {
+            background: rgb(212, 226, 248);
+            color: rgb(17, 93, 214);
+        }
+    }
+
+    .supplementaryPhoto {
+        background: url('../../../assets/images/1.png');
+        background-repeat: no-repeat;
+
+        width: 320px;
+        height: 169px;
+    }
+}
+
+.contact {
+    .title {
+        font-size: 2.7rem;
+        font-weight: 600;
+    }
+
+    .compartmentIcon {
+        background-image: url(../../../assets/images/contact_footer.png);
+        background-size: cover;
+        width: 100px;
+        height: 5px;
+        margin-top: 10px;
+    }
+
+    .contactInfo {
+        display: flex;
+        align-items: center;
+        margin: 30px 0;
+
+        .icon {
+            padding-right: 5px;
+            background: rgb(255, 223, 225);
+            padding: 10px 11px;
+            border-radius: 5px;
+            margin-right: 12px;
+
+            svg {
+                color: crimson;
+                font-size: 20px;
+            }
+        }
+
+        .info {
+            display: flex;
+            flex-direction: column;
+            font-size: 16px;
+            span {
+                line-height: 20px;
+            }
+        }
+    }
+}
+
+.hourFooter {
+    background: rgb(254, 238, 231);
+    border-radius: 10px;
+
+    background: url(../../../assets/images/hour_footer.png) center center no-repeat rgb(254, 238, 231);
+    padding: 8px 15px;
+
+    .heading {
+        font-size: 27px;
+        font-weight: 600;
+        margin-bottom: 20px;
+    }
+
+    .operatingTime {
+        font-size: 17px;
+        display: flex;
+        padding: 10px 0;
+        font-weight: 600;
+
+        .day {
+            flex: 2;
+        }
+
+        .time {
+            float: right;
+            flex: 2;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .colorRedPrivate {
+            color: red;
+        }
+
+        .colorOrangePrivate {
+            color: rgb(255, 112, 42);
+        }
+
+        .iconArrow {
+            display: flex;
+            justify-content: center;
+            flex: 1;
+        }
+    }
+}
+
+.footerBootom {
+    background: #feeee7;
+
+    .wapper {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 50px;
+        font-size: 15px;
+        font-weight: 400;
+
+        .rules {
+            position: relative;
+            margin-right: 10px;
+            
+            &:hover {
+                color: #ff702a;
+            cursor: pointer;
+            }
+
+            &::after {
+                position: absolute;
+                content: "";
+                display: block;
+                width: 2px;
+                height: 17px;
+                right: -10px;
+                top: 2px;
+                background: #115dd6;
+                opacity: 0.7;
+            }
+        }
+
+        .privacyPolicy {
+            margin-left: 10px;
+
+            &:hover {
+                color: #ff702a;
+                cursor: pointer;
+            }
+        }
+    }
+}

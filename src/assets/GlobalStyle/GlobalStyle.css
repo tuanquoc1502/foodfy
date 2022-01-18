@@ -1,0 +1,77 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap");
+
+* {
+    box-sizing: inherit;
+}
+
+html {
+    font-family: "Nunito", sans-serif;
+
+    font-size: 62.5%;
+    line-height: 1.6rem;
+
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    scroll-behavior: smooth;
+
+    /* -webkit-user-select: none;
+    user-select: none; */
+}
+
+/* --- */
+
+.App {
+    background: #f5f5fa;
+}
+
+/* Scroll Bar Window */
+::-webkit-scrollbar {
+    width: 0.8rem;
+    background-color: rgb(245, 245, 245);
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    border: 1px solid transparent;
+    background-color: rgb(144, 144, 144);
+    background-clip: content-box;
+}
+
+/* Scroll bar Cart */
+.wapperItem::-webkit-scrollbar-thumb {
+    border: 2px solid transparent;
+    background-color: rgb(144, 144, 144);
+}
+
+.wapperItem::-webkit-scrollbar {
+    width: 0.7rem;
+    background-color: rgb(245, 245, 245);
+}
+
+/* Reset slick slider */
+.slick-arrow {
+    width: 30px !important;
+    height: 30px !important;
+    border-radius: 50%;
+    background-color: rgb(44, 43, 43) !important;
+}
+
+.slick-arrow:hover {
+    background-color: rgb(19, 14, 14, 1) !important;
+}
+
+.slick-prev {
+    box-shadow: 0 3px 20px rgb(0 0 0 / 8%);
+}
+
+.slick-next {
+    box-shadow: 0 3px 20px rgb(0 0 0 / 8%);
+}
+
+.slick-prev:before,
+.slick-next:before {
+    line-height: 32px !important;
+    color: white !important;
+}
