@@ -6,11 +6,11 @@ import styles from './Auth.module.scss'
 
 function Login() {
 
-    const { loginWithRedirect, isAuthenticated } = useAuth0();
+    const { loginWithRedirect, isAuthenticated, loginWithPopup } = useAuth0();
 
     return (
         !isAuthenticated && (
-            <div className={styles.login} onClick={() => loginWithRedirect()}>
+            <div className={styles.login} onClick={() => loginWithPopup()}>
                 <FaUser />
                 <div className={styles.title}>Login</div>
             </div>

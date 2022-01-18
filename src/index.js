@@ -13,7 +13,7 @@ ReactDOM.render(
   <Auth0Provider domain={domain} clientId={clientId} redirectUri={window.location.origin}>
     <StoreProvider>
       <CartProvider>
-          <App />
+        <App />
       </CartProvider>
     </StoreProvider>
   </Auth0Provider>,
