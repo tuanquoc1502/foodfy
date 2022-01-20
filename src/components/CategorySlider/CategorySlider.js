@@ -1,6 +1,6 @@
 import React from 'react';
 import Slider from "react-slick";
-import styles from './styles.module.scss'
+import styles from './CategorySlider.module.scss'
 
 import { categorySlider } from '../../services/categorySlider';
 
@@ -46,8 +46,8 @@ function CategorySlider() {
     return (
         <div className={styles.box}>
             <div className={styles.boxSlider}>
-                <h3 className={styles.headingSlider}>What we have?</h3>
-                <span className={styles.titleSlider}>Browse food category</span>
+                <h3 className={styles.titleSlider}>What we have?</h3>
+                <span className={styles.subTitleSlider}>Browse food category</span>
                 <Slider {...settings}>
                     {categorySlider.map(item => (
                         <div className={styles.imgFoodItem} key={item.name}>

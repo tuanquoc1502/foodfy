@@ -21,6 +21,7 @@ import { AiOutlineShoppingCart } from 'react-icons/ai'
 
 import CartContext from "../../../store/CartContext/Context"
 import CategorySlider from '../../CategorySlider/CategorySlider'
+import BackgroundSlider from '../../BackgroundSlider/BackgroundSlider'
 
 const pages = [
     {
@@ -71,7 +72,6 @@ function Container({ props }) {
         }
 
         fetchProductList();
-
     }, [page, nameProduct])
 
     const handlePage = (id) => {
@@ -116,6 +116,7 @@ function Container({ props }) {
 
     return (
         <div className={styles.container}>
+            <BackgroundSlider />
             <CategorySlider />
             <div className={'grid wide'}>
                 <div className={styles.wapper}>

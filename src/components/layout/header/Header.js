@@ -1,10 +1,11 @@
-import { useEffect, useState, useRef } from "react"
+import { useEffect, useState, useMemo } from "react"
 import { Link } from "react-router-dom"
 import { memo } from 'react'
 
 import { HiShoppingCart } from 'react-icons/hi'
 import { IoIosArrowUp } from 'react-icons/io'
 import { AiFillDelete } from 'react-icons/ai'
+import { BsArrowRightShort } from 'react-icons/bs'
 
 import styles from './Header.module.scss'
 import clsx from 'clsx'
@@ -12,7 +13,6 @@ import { useStore2 } from "../../../store"
 import Login from "../../../auth/Login"
 import Logout from '../../../auth/Logout'
 import { useAuth0 } from '@auth0/auth0-react'
-import BackgroundSlider from "../../BackgroundSlider/BackgroundSlider"
 
 function Header() {
 
@@ -24,6 +24,16 @@ function Header() {
 
     const { user, isAuthenticated } = useAuth0();
     const { isLoading } = useAuth0();
+
+    const total = useMemo(() => {
+
+        const result = cart.reduce((result, prod) => {
+            return result + prod.price
+        }, 0)
+
+        return result
+
+    }, [cart])
 
     useEffect(() => {
 
@@ -67,11 +77,14 @@ function Header() {
                         <Link to="/" className={styles.textDecoration}>
                             <li className={styles.menuItem}>Home</li>
                         </Link>
-                        <li className={styles.menuItem}>Menu</li>
+                        <Link to="/favorite" className={styles.textDecoration}>
+                            <li className={styles.menuItem}>Favorite</li>
+                        </Link>
                         <li className={styles.menuItem}>About</li>
                     </ul>
                 </div>
                 <div className={styles.navRight}>
+
                     <div className={styles.cart}>
                         <HiShoppingCart />
                         <span className={styles.rowNumber}>{numberCart}</span>
@@ -105,9 +118,16 @@ function Header() {
                                     ))}
 
                                 </div>
+
+                                <div className={styles.paymentBtn}>
+                                    <span className={styles.price}>$ {total}</span>
+                                    <span className={styles.checkout}>Checkout <BsArrowRightShort/></span>
+                                </div>
+
                             </div>
                         </div>
                     </div>
+
                     <div className={styles.wapperUser}>
                         {isAuthenticated && (
                             <div className={styles.profile}>
@@ -118,9 +138,10 @@ function Header() {
                         <Login />
                         <div className={styles.logout}> <Logout /> </div>
                     </div>
+
                 </div>
             </div>
-            <BackgroundSlider />
+
             {/* Go to Top */}
             {showGoToTop && (
                 <div className={styles.goToTop} onClick={handleBack}>

@@ -4,6 +4,7 @@ import GlobalStyle from './assets/GlobalStyle';
 
 import ShowProductById from './pages/showProductById/ShowProductById';
 import NotFound from './pages/notFound/NotFound';
+import FavoriteProduct from './pages/favoriteProduct/FavoriteProduct';
 
 function App() {
   return (
@@ -13,7 +14,8 @@ function App() {
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/product/:id" element={<ShowProductById />} />
-            {/* <Route path='*' element={<NotFound />} /> */}
+            <Route path="/favorite" element={<FavoriteProduct />} />
+            <Route path='*' element={<HomePage />} />
           </Routes>
         </BrowserRouter>
       </div>

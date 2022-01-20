@@ -5,7 +5,7 @@ import { RiShoppingBasketLine } from 'react-icons/ri'
 function BackgroundSlider() {
 
     const handleOderNow = () => {
-        document.documentElement.scrollTop = 1120
+        document.documentElement.scrollTop = 900
     }
 
     return (

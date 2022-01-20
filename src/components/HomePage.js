@@ -9,10 +9,11 @@ function HomePage() {
     const [state, setState] = useState([])
 
     useEffect(() => {
+
         const fetchProductList = async () => {
             try {
 
-                const type = 'burgers'
+                const type = 'best-foods'
 
                 const res = await productApi.getItem(type);
                 setState(res)
@@ -21,7 +22,9 @@ function HomePage() {
                 console.log('apiFood', error)
             }
         }
+
         fetchProductList();
+
     }, [])
 
     return (

@@ -1,0 +1,256 @@
+.backgroundSlider {
+    padding: 220px 0;
+    background: #111 url("../../assets/images/background2.jpg") center center no-repeat;
+    background-size: cover;
+
+    .pageDescription {
+        max-width: 700px;
+        position: absolute;
+        top: 145px;
+        margin-left: 15%;
+
+        .title {
+            color: #f4ce02;
+            margin: 0px 0px 25px;
+            font-size: 48px;
+            letter-spacing: 0;
+            font-weight: 600;
+        }
+    }
+}
+
+.poplularDishes {
+    text-align: center;
+    max-width: 1200px;
+    margin: 50px auto 70px;
+    padding: 0 40px;
+
+    .title {
+        color: rgb(35, 41, 44);
+        font-size: 50px;
+        font-family: "Zilla Slab", serif;
+        font-weight: 300;
+    }
+
+    .subTitle {
+        color: rgb(119, 119, 119);
+        font-size: 18px;
+        font-family: "Zilla Slab", serif;
+        font-weight: 400;
+        margin: 0px 0px 10px;
+        line-height: 28px;
+        padding-bottom: 30px;
+    }
+
+    .itemProduct {
+        max-width: 235px;
+
+        .imgProduct {
+            display: flex;
+            justify-content: center;
+        }
+
+        .nameProduct {
+            color: rgb(35, 41, 44);
+            font-size: 22px;
+
+            font-weight: 400;
+            line-height: 28px;
+        }
+
+        .describeProduct {
+            font-size: 16px;
+            color: rgb(119, 119, 119);
+            font-weight: 400;
+            line-height: 20px;
+            padding: 10px 0 15px 0;
+        }
+
+        .priceProduct {
+            color: rgb(234, 70, 43);
+            display: block;
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .orderProduct {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+
+            color: rgb(35, 41, 44);
+            font-size: 18px;
+            width: 160px;
+            height: 50px;
+            padding: 5px 5px;
+            border: 1px solid rgb(234, 70, 43);
+            font-weight: 600;
+            transition: all 0.2s ease-in-out 0s;
+            cursor: pointer;
+
+            &:hover {
+                color: rgb(255, 255, 255);
+                background: rgb(234, 70, 43);
+            }
+        }
+    }
+}
+
+.wapperServicesBox {
+    border-top: 1px solid rgb(207, 202, 202);
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 0;
+
+    .servicesBox {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+
+        .title {
+            padding-top: 10px;
+            color: rgb(35, 41, 44);
+            font-size: 20px;
+            font-weight: 600;
+            line-height: 28px;
+        }
+    }
+}
+
+.backgroundBody {
+    background-image: url("../../assets/images/slide2.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 220px 0;
+    background-size: cover;
+
+    .bannerBox {
+        margin: 0px auto;
+        max-width: 820px;
+        text-align: center;
+
+        .heading {
+            color: rgb(255, 255, 255);
+            font-size: 50px;
+            font-family: "Zilla Slab", serif;
+            font-weight: 400;
+            margin: 0px 0px 10px;
+            line-height: 56px;
+        }
+
+        .subHeading {
+            margin-bottom: 25px;
+            font-weight: 400;
+            font-size: 22px;
+            line-height: 28px;
+            color: rgb(235, 227, 227);
+        }
+
+        .setTable {
+            margin: 20px auto 0;
+            padding: 14px 0;
+            width: 170px;
+
+            font-size: 18px;
+            font-weight: 600;
+
+            color: rgb(255, 255, 255);
+            background: rgb(234, 70, 43);
+            transition: all 0.2s ease-in-out 0s;
+            cursor: pointer;
+
+            &:hover {
+                background: white;
+                color: rgb(234, 70, 43);
+            }
+        }
+    }
+}
+
+.favoriteFood {
+    padding-top: 70px;
+
+    .boxProductFavorite {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 80px;
+
+        .boxLeft {
+            width: 40%;
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        .boxRight {
+            width: 60%;
+
+            .heading {
+                padding-bottom: 15px;
+                margin-bottom: 25px;
+                font-size: 50px;
+                font-weight: 600;
+                line-height: 56px;
+                color: rgb(35, 41, 44);
+                border-bottom: 1px solid rgb(225, 225, 225);
+            }
+
+            ul {
+                background: white;
+                padding: 10px;
+            }
+
+            .itemProduct {
+                display: flex;
+                align-items: center;
+                margin-bottom: 20px;
+
+                .imgProduct {
+                    padding-right: 20px;
+                }
+
+                .infoTop {
+                    margin-bottom: 10px;
+                    line-height: 20px;
+                    border-bottom: 1px dotted rgb(166, 166, 166);
+
+                    .nameProduct {
+                        font-size: 16px;
+                        font-weight: 700;
+                        padding-bottom: 3px;
+                        background: rgb(255, 255, 255);
+                    }
+
+                    .priceProduct {
+                        float: right;
+                        font-size: 18px;
+                        font-weight: 700;
+                        padding-bottom: 3px;
+                        color: rgb(234, 70, 43);
+                        background: rgb(255, 255, 255);
+                    }
+                }
+
+                .infoBottom {
+                    width: 100%;
+                    font-size: 15px;
+                    color: rgb(119, 119, 119);
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+
+    .mainPizzaPhoto, .mainBurgerPhoto {
+        padding-right: 30px;
+    }
+
+    .mainPastaPhoto {
+        padding-left: 30px;
+    }
+}

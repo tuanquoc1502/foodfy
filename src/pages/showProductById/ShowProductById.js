@@ -1,5 +1,5 @@
 import clsx from "clsx";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useParams } from "react-router-dom";
 import Header from "../../components/layout/header/Header";
 import Footer from "../../components/layout/footer/Footer";
@@ -10,26 +10,36 @@ import { MdAddShoppingCart } from 'react-icons/md'
 import { AiFillStar, AiOutlineTags } from 'react-icons/ai'
 import { BiPlus, BiMinus, BiCalendarCheck } from 'react-icons/bi'
 import { FcShipped } from 'react-icons/fc'
+import BackgroundSlider from "../../components/BackgroundSlider/BackgroundSlider";
 
 
 function ShowProductById() {
-    const [quantily, setQuantily] = useState(1)
-    // const [price, setPrice] = useState()
-    
     const [data] = useStore()
     const { id } = useParams();
 
+    const product = data.find(food => food.id.toString() === id)
+    const total = product.price;
+
+    const [quantily, setQuantily] = useState(1)
+    const [price, setPrice] = useState(total)
+    
+    const prevQuantily = useRef()
+
+    useEffect(() => {
+        prevQuantily.current = quantily
+    }, [quantily])
+
     const btnIncreaseProduct = () => {
         setQuantily(prev => prev + 1)
+        setPrice(prev => prev + total)
     }
 
     const btnReductionProduct = () => {
-        if (quantily > 0) {
+        if (quantily > 1) {
             setQuantily(prev => prev - 1)
+            setPrice(prev => prev - total)
         }
     }
-
-    const product = data.find(food => food.id.toString() === id)
 
     // Process the first letter of the output information
     const outputInformation = product.id.toString().charAt(0).toUpperCase() + product.id.toString().slice(1)
@@ -37,6 +47,7 @@ function ShowProductById() {
     return (
         <div>
             <Header />
+            <BackgroundSlider />
             <div className={'grid wide'}>
                 <div className={clsx(styles.wapper)}>
 
@@ -58,7 +69,7 @@ function ShowProductById() {
                             <span className={styles.evaluate}>0 Customer Reviews</span>
                         </div>
 
-                        <div className={styles.price}>${product.price}</div>
+                        <div className={styles.price}>${price}</div>
 
                         <div className={styles.origin}>
                             <span className={styles.country}>Country:</span>
