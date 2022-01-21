@@ -208,12 +208,11 @@
 
                         svg {
                             color: white;
-                            
+
                             &:hover {
                                 color: #ff514e;
                             }
                         }
-
                     }
 
                     .favoriteBtn {
@@ -424,7 +423,6 @@
             display: flex;
             justify-content: center;
             align-items: center;
-
             width: 43px;
             height: 32px;
             margin: 0 8px;
@@ -440,4 +438,37 @@
     }
 }
 
+
 // Reponsive
+
+// Tablet + Mobile
+@media only screen and (max-width: 63.9375em) {
+    .wapper {
+        .sideBar {
+            display: none;
+        }
+    }
+}
+
+// Tablet
+@media only screen and (min-width: 46.25em) and (max-width: 63.9375em) {
+}
+
+// Mobile
+@media only screen and (max-width: 46.1875em) {
+    .product {
+        padding: 0 20px;
+        .search {
+            flex: 1;
+            margin: 0 35px 0 10px;
+        }
+
+        .filter {
+            display: none !important;
+        }
+
+        .typePillar {
+            margin-right: 18px;
+        }
+    }
+}

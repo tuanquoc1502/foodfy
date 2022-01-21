@@ -246,11 +246,65 @@
         }
     }
 
-    .mainPizzaPhoto, .mainBurgerPhoto {
+    .mainPizzaPhoto,
+    .mainBurgerPhoto {
         padding-right: 30px;
     }
 
     .mainPastaPhoto {
         padding-left: 30px;
+    }
+}
+
+// Reponsive
+
+// Tablet + Mobile
+@media only screen and (max-width: 63.9375em) {
+}
+
+// Tablet
+@media only screen and (min-width: 46.25em) and (max-width: 63.9375em) {
+    .servicesBox {
+        margin: 0 10px;
+        text-align: center;
+    }
+}
+
+// Mobile
+@media only screen and (max-width: 46.1875em) {
+    .imgProduct {
+        img {
+            width: 150px;
+        }
+    }
+
+    .wapperServicesBox {
+        margin: 0 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        .servicesBox {
+            padding: 20px;
+        }
+    }
+
+    .boxProductFavorite {
+        flex-direction: column;
+        align-items: center;
+
+        .boxLeft {
+            display: none;
+        }
+
+        .boxRight {
+            width: 90% !important;
+            .imgProduct {
+                img {
+                    width: 70px;
+                }
+            }
+        }
     }
 }

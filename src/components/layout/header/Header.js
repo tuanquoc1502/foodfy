@@ -6,12 +6,14 @@ import { HiShoppingCart } from 'react-icons/hi'
 import { IoIosArrowUp } from 'react-icons/io'
 import { AiFillDelete } from 'react-icons/ai'
 import { BsArrowRightShort } from 'react-icons/bs'
+import { GoThreeBars } from 'react-icons/go'
 
 import styles from './Header.module.scss'
 import clsx from 'clsx'
 import { useStore2 } from "../../../store"
 import Login from "../../../auth/Login"
 import Logout from '../../../auth/Logout'
+import LogoutMobile from "../../../auth/LogoutMobile"
 import { useAuth0 } from '@auth0/auth0-react'
 
 function Header() {
@@ -21,6 +23,7 @@ function Header() {
 
     const [showGoToTop, setGoToTop] = useState(false)
     const [backGroundHeader, setBackgroundHeader] = useState(false)
+    const [navBar, setNavBar] = useState(false)
 
     const { user, isAuthenticated } = useAuth0();
     const { isLoading } = useAuth0();
@@ -61,15 +64,53 @@ function Header() {
         setCart(itemCart)
     }
 
+    const handleOpenNavBar = () => {
+        setNavBar(true)
+    }
+
+    const handleStopModal = () => {
+        setNavBar(false)
+    }
+
     useEffect(() => {
         setNumberCart(cart.length)
     }, [cart])
 
-    if (isLoading) return <div>Loading...</div>
+
+    if (isLoading) return <div></div>
 
     return (
         <div className={styles.header}>
             <div className={styles.navBar} style={backGroundHeader ? { backgroundColor: 'rgba(72, 49, 37, 0.9)' } : {}}>
+                <div className={styles.wapperNavbarMobile}>
+                    <div className={styles.iconNavBar} onClick={handleOpenNavBar}><GoThreeBars /></div>
+                    <div className={styles.navbarMobile} style={navBar ? { display: 'block' } : { display: 'none' }}>
+                        <div className={styles.wapperUserMobile}>
+                            {isAuthenticated && (
+                                <div className={styles.profile}>
+                                    <div className={styles.ImageUser}><img src={user.picture} alt={user.name} /> </div>
+                                    <h2 className={styles.nameUser}>{user.name}</h2>
+                                </div>
+                            )}
+                            <Login />
+                            <div className={styles.logout}> <LogoutMobile /> </div>
+                        </div>
+
+                        <ul className={styles.menuListMb}>
+                            <Link to="/" className={styles.textDecoration}>
+                                <li className={styles.menuItemMb}>Home</li>
+                            </Link>
+                            <Link to="/favorite" className={styles.textDecoration}>
+                                <li className={styles.menuItemMb}>Favorite</li>
+                            </Link>
+                            <li className={styles.menuItemMb}>About</li>
+                        </ul>
+
+                    </div>
+                    <div className={styles.overlay} onClick={handleStopModal} style={navBar ? { display: 'block' } : { display: 'none' }}></div>
+
+                </div>
+
                 <div className={styles.navLeft}>
                     <div className={styles.navLogo}></div>
                     <div className={styles.pageName}>Foodfy.</div>
@@ -83,6 +124,7 @@ function Header() {
                         <li className={styles.menuItem}>About</li>
                     </ul>
                 </div>
+
                 <div className={styles.navRight}>
 
                     <div className={styles.cart}>
@@ -121,7 +163,7 @@ function Header() {
 
                                 <div className={styles.paymentBtn}>
                                     <span className={styles.price}>$ {total}</span>
-                                    <span className={styles.checkout}>Checkout <BsArrowRightShort/></span>
+                                    <span className={styles.checkout}>Checkout <BsArrowRightShort /></span>
                                 </div>
 
                             </div>

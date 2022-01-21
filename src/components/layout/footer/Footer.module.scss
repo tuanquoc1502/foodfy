@@ -54,7 +54,7 @@
     }
 
     .supplementaryPhoto {
-        background: url('../../../assets/images/1.png');
+        background: url("../../../assets/images/1.png");
         background-repeat: no-repeat;
 
         width: 320px;
@@ -164,10 +164,10 @@
         .rules {
             position: relative;
             margin-right: 10px;
-            
+
             &:hover {
                 color: #ff702a;
-            cursor: pointer;
+                cursor: pointer;
             }
 
             &::after {
@@ -190,6 +190,27 @@
                 color: #ff702a;
                 cursor: pointer;
             }
+        }
+    }
+}
+
+@media only screen and (max-width: 63.9375em) {
+}
+
+// Tablet
+@media only screen and (min-width: 46.25em) and (max-width: 63.9375em) {
+  
+}
+
+// Mobile
+@media only screen and (max-width: 46.1875em) {
+    .footer {
+        .topContent {
+            max-width: 330px;
+        }
+
+        .contact, .topContent {
+            margin-left: 70px;
         }
     }
 }

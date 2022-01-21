@@ -181,7 +181,7 @@ function Container({ props }) {
                                 <div key={item.id} className={clsx(styles.itemProduct, 'col l-3 m-4 c-4', productFrame && styles.onePillar)}>
 
                                     <div className={styles.boxImg}>
-                                        <Link to={`product/${item.id}`}>
+                                        <Link to={`/product/${item.id}`}>
                                             <img src={item.img} className={styles.imgProduct}></img>
                                             <div className={styles.evaluate}>
                                                 <span className={styles.iconStar}><GiRoundStar /></span>

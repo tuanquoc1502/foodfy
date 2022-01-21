@@ -11,7 +11,7 @@ import { ImArrowRight2 } from 'react-icons/im'
 
 function Footer() {
     return (
-        <div>
+        <div className={styles.footer}>
             <div className={styles.footerTop}>
                 <div className='grid wide'>
                     <div className='row'>

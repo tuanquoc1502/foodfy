@@ -54,7 +54,7 @@
 
         margin-bottom: 5px;
         padding: 5px 5px;
-        
+
         cursor: pointer;
 
         &:hover {
@@ -72,6 +72,33 @@
         &:hover {
             background: rgb(226, 226, 226);
             border-radius: 5px;
+        }
+    }
+}
+
+.wapperLogoutMobile {
+    margin-right: 30px;
+
+    .logoutMobile {
+        display: flex;
+        align-items: center;
+        font-size: 14px;
+        font-weight: 700;
+        border: 1px solid white;
+        padding: 4px 8px;
+        cursor: pointer;
+
+        &:hover {
+            opacity: 0.8;
+        }
+
+        .title {
+            padding-right: 7px;
+        }
+
+        .iconLogout {
+            font-size: 15px;
+            
         }
     }
 }

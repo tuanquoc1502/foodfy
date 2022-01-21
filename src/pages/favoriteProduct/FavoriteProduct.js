@@ -13,7 +13,7 @@ function FavoriteProduct() {
     let settings = {
         dots: false,
         infinite: true,
-        autoplay: true,
+        // autoplay: true,
         speed: 500,
         slidesToShow: 3,
         slidesToScroll: 1,
@@ -75,6 +75,7 @@ function FavoriteProduct() {
 
                 <div className={clsx(styles.wapperServicesBox, 'grid wide')}>
                     {servicesSliderList.map(item => (
+
                         <div key={item.id} className={styles.servicesBox}>
                             <div><img src={item.image}></img></div>
                             <div className={styles.title}>{item.title}</div>

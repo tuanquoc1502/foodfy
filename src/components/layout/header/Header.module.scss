@@ -13,6 +13,10 @@
 
     z-index: 1000;
 
+    .navBarMbTl {
+        display: none;
+    }
+
     .navLeft {
         display: flex;
         align-items: center;
@@ -237,7 +241,7 @@
                         border-radius: 10px;
                         color: white;
                         cursor: pointer;
-                        
+
                         &:hover {
                             opacity: 0.94;
                         }
@@ -252,7 +256,7 @@
                             font-weight: 600;
                             display: flex;
                             align-items: center;
-                            
+
                             svg {
                                 font-size: 20px;
                             }
@@ -280,25 +284,25 @@
 .wapperUser {
     position: relative;
     top: 1px;
-    
+
     .logout {
         display: none;
         position: absolute;
         bottom: -77px;
         right: -14px;
     }
-    
+
     &:hover .logout {
         display: block;
         animation: fadaIn linear 0.25s;
     }
-    
+
     .profile {
         display: flex;
         align-items: center;
         margin-left: 30px;
         cursor: pointer;
-    
+
         .ImageUser {
             img {
                 width: 40px;
@@ -306,7 +310,7 @@
                 border-radius: 50%;
             }
         }
-    
+
         .nameUser {
             padding-left: 8px;
             color: white;
@@ -315,16 +319,23 @@
         }
     }
 
-    @keyframes fadaIn{
+    @keyframes fadaIn {
         from {
             opacity: 0;
-        } to {
+        }
+        to {
             opacity: 1;
         }
     }
 }
 
+// .iconNavBar, .navbarMobile, .overlay {
+//     display: none;
+// }
 
+.wapperNavbarMobile {
+    display: none;
+}
 
 .goToTop {
     position: fixed;
@@ -353,4 +364,133 @@
         font-size: 35px;
         color: rgb(255, 81, 78);
     }
+}
+
+// Responsive
+
+// Tablet + Mobile
+@media only screen and (max-width: 63.9375em) {
+    .navBar {
+        display: flex;
+        justify-content: space-between;
+
+        .wapperNavbarMobile {
+            font-size: 31px;
+            color: white;
+            display: block;
+
+            .iconNavBar {
+                display: block;
+                cursor: pointer;
+
+                &:hover {
+                    opacity: 0.85;
+                }
+            }
+
+            .navbarMobile {
+                display: block;
+                position: fixed;
+                left: 0;
+                top: 0;
+                bottom: 0;
+
+                width: 400px;
+                background: #5a453a;
+                animation: FadeIn ease 0.4s;
+                z-index: 10000;
+
+                @keyframes FadeIn {
+                    from {
+                        transform: translateX(-450px);
+                        opacity: 0;
+                    }
+                    to {
+                        transform: translateX(0);
+                        opacity: 1;
+                    }
+                }
+
+                .wapperUserMobile {
+                    position: relative;
+                    display: flex;
+                    margin-top: 10px;
+                    align-items: center;
+                    justify-content: space-between;
+                    padding-bottom: 5px;
+                    border-bottom: 1px solid #999;
+
+                    .profile {
+                        display: flex;
+                        align-items: center;
+                        margin-left: 30px;
+                        user-select: none;
+
+                        .ImageUser {
+                            img {
+                                width: 40px;
+                                height: 40px;
+                                border-radius: 50%;
+                            }
+                        }
+
+                        .nameUser {
+                            padding-left: 8px;
+                            color: white;
+                            font-size: 15.5px;
+                            font-weight: 700;
+                        }
+                    }
+                }
+
+                .menuListMb {
+                    font-size: 19px;
+                    margin-left: 30px;
+
+                    .textDecoration {
+                        text-decoration: none;
+
+                        .menuItemMb {
+                            color: white;
+                            margin: 30px 0;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+
+            .overlay {
+                position: fixed;
+                top: 0;
+                right: 0;
+                left: 0;
+                bottom: 0;
+                background: rgba(0, 0, 0, 0.5);
+                z-index: 1000;
+            }
+        }
+
+        .cart {
+            margin: 0 !important;
+        }
+        .pageName {
+            margin: 0 !important;
+        }
+    }
+
+    .wapperUser {
+        display: none;
+    }
+
+    .menuList {
+        display: none !important;
+    }
+}
+
+// Tablet
+@media only screen and (min-width: 46.25em) and (max-width: 63.9375em) {
+}
+
+// Mobile
+@media only screen and (max-width: 46.1875em) {
 }
