@@ -1,0 +1,406 @@
+.backgroundSlider {
+    background: url("../../assets/images/background1.jpg");
+    padding: 220px 0;
+    background-size: cover;
+
+    .pageDescription {
+        max-width: 700px;
+        position: absolute;
+        top: 145px;
+        margin-left: 15%;
+
+        .title {
+            color: #f4ce02;
+            margin: 0px 0px 25px;
+            font-size: 48px;
+            letter-spacing: 0;
+            font-weight: 600;
+        }
+
+        .subTitle {
+            color: white;
+            font-size: 18px;
+        }
+    }
+}
+
+.boxContent {
+    padding-top: 70px;
+    display: flex;
+    justify-content: center;
+
+    .boxLeft {
+        width: 60%;
+        img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+    }
+
+    .boxRight {
+        width: 40%;
+        margin-left: 30px;
+
+        .heading {
+            font-size: 32px;
+            line-height: 45px;
+            color: #43121d;
+            font-weight: 700;
+        }
+
+        .subHeading {
+            padding-top: 20px;
+            padding-bottom: 20px;
+
+            letter-spacing: 0.5px;
+            font-size: 18px;
+            color: #555;
+            line-height: 28px;
+            font-weight: 400;
+        }
+
+        .btnInformation {
+            background: #f4ce02;
+            width: 150px;
+            padding: 13px 0;
+            text-align: center;
+            border-radius: 5px;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            border: 3px solid #f4ce02;
+            transition: all 0.25s;
+
+            &:hover {
+                background: none;
+            }
+        }
+    }
+}
+
+.boxContent2 {
+    padding-top: 70px;
+    display: flex;
+    justify-content: center;
+
+    .boxLeft {
+        width: 60%;
+        img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+    }
+
+    .boxRight {
+        width: 40%;
+        margin-right: 30px;
+        margin-top: 50px;
+
+        .heading {
+            font-size: 32px;
+            line-height: 45px;
+            color: #43121d;
+            font-weight: 700;
+        }
+
+        .subHeading {
+            padding-top: 20px;
+            padding-bottom: 20px;
+
+            letter-spacing: 0.5px;
+            font-size: 18px;
+            color: #555;
+            line-height: 28px;
+            font-weight: 400;
+        }
+
+        .listAttention {
+            padding-bottom: 25px;
+            font-size: 17px;
+
+            li {
+                display: flex;
+                align-items: center;
+                padding: 5px 0;
+
+                svg {
+                    margin-right: 10px;
+                    color: #43121d;
+                }
+            }
+        }
+
+        .btnInformation {
+            background: #f4ce02;
+            width: 150px;
+            padding: 13px 0;
+            text-align: center;
+            border-radius: 5px;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            border: 3px solid #f4ce02;
+            transition: all 0.25s;
+
+            &:hover {
+                background: none;
+            }
+        }
+    }
+}
+
+.marketContext {
+    display: flex;
+    height: 915px;
+
+    .boxLeft {
+        width: 50%;
+        background: #f6f9ff;
+
+        .wapper {
+            display: flex;
+            flex-direction: column;
+            margin: 0 auto;
+            max-width: 60%;
+
+            .heading {
+                color: #0a3370;
+                margin-top: 150px;
+                font-size: 43px;
+                font-weight: 800;
+                letter-spacing: -0.5px;
+                color: rgb(13, 63, 138);
+                margin-bottom: 12px;
+            }
+
+            .title {
+                font-size: 17.5px;
+                font-weight: 500;
+                line-height: 1.4;
+                color: #0a3370;
+            }
+        }
+    }
+
+    .boxRight {
+        width: 50%;
+
+        .wapper {
+            background-image: url("../../../src/assets/images/EfastAbout-img-2.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 100%;
+            height: 915px;
+            position: relative;
+
+            .boxItem {
+                position: absolute;
+                bottom: 0;
+                display: flex;
+
+                .boxItem1 {
+                    background: #0d3f8a;
+                    line-height: 23.8px;
+                    padding: 75px 55px 55px;
+                    text-align: left;
+                    max-width: 40%;
+
+                    .parameter {
+                        color: white;
+                        font-size: 80px;
+                        font-weight: 800;
+                        margin-bottom: 30px;
+                        margin-top: 40px;
+                    }
+
+                    .title {
+                        color: rgb(255, 255, 255);
+                        opacity: 0.65;
+                        font-size: 16px;
+                    }
+                }
+
+                .boxItem2 {
+                    background: #0a3370;
+                    line-height: 23.8px;
+                    padding: 75px 55px 55px;
+                    text-align: left;
+                    max-width: 40%;
+                    max-width: 40%;
+
+                    .parameter {
+                        color: white;
+                        font-size: 80px;
+                        font-weight: 800;
+                        margin-bottom: 30px;
+                        margin-top: 40px;
+                    }
+
+                    .title {
+                        color: rgb(255, 255, 255);
+                        opacity: 0.65;
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 74.4375em) {
+    .marketContext {
+        flex-direction: column;
+        height: 100% !important;
+
+        .boxLeft {
+            width: 100%;
+            padding-bottom: 80px;
+            .wapper {
+                margin-left: 150px;
+            }
+        }
+
+        .boxRight {
+            width: 100%;
+
+            .boxItem {
+                left: 0;
+                right: 0;
+
+                .parameter {
+                    font-size: 60px !important;
+                    font-weight: 800 !important;
+                    margin-bottom: 13px !important;
+                }
+
+                .title {
+                    font-size: 15px !important;
+                }
+
+                .boxItem1 {
+                    max-width: 50% !important;
+                    flex: 1;
+                    padding: 45px 25px 25px !important;
+                }
+                .boxItem2 {
+                    max-width: 50% !important;
+                    flex: 1;
+                    padding: 45px 25px 25px !important;
+                }
+            }
+        }
+    }
+}
+// Reponsive
+
+// Tablet + Mobile
+@media only screen and (max-width: 63.9375em) {
+    .boxContent {
+        flex-direction: column;
+        align-items: center;
+
+        .boxLeft {
+            width: 100%;
+            img {
+                width: 100%;
+            }
+        }
+
+        .boxRight {
+            width: 100%;
+            margin: 0;
+            margin-top: 20px;
+        }
+    }
+
+    .boxContent2 {
+        flex-direction: column;
+        align-items: center;
+
+        .boxRight {
+            width: 100%;
+            order: 2;
+            margin: 0;
+        }
+
+        .boxLeft {
+            width: 100%;
+            order: 1;
+        }
+    }
+
+    .marketContext {
+        flex-direction: column;
+    }
+}
+
+// Tablet
+@media only screen and (min-width: 46.25em) and (max-width: 63.9375em) {
+    .marketContext {
+        flex-direction: column;
+    }
+}
+
+// Mobile
+@media only screen and (max-width: 46.1875em) {
+
+    .marketContext {
+        flex-direction: column;
+
+        .boxLeft {
+            width: 100%;
+            padding-bottom: 80px;
+
+            .wapper {
+                margin-left: 20px;
+                margin-right: 15px;
+                max-width: 100%;
+
+                .heading {
+                    font-size: 30px;
+                }
+
+                .title {
+                    font-size: 16px;
+                    color: #666666;
+                }
+            }
+        }
+
+        .boxRight {
+            width: 100%;
+            
+            .boxItem {
+                left: 0;
+                right: 0;
+
+                .parameter {
+                    font-size: 35px !important;
+                    font-weight: 800 !important;
+                    margin: 0 !important;
+                    padding-bottom: 10px;
+                }
+
+                .title {
+                    font-size: 12px !important;
+                    line-height: 1.4;
+                }
+
+                .boxItem1 {
+                    max-width: 50% !important;
+                    flex: 1;
+                    padding: 30px 23px !important;
+                }
+                .boxItem2 {
+                    max-width: 50% !important;
+                    flex: 1;
+                    padding: 30px 23px !important;
+                }
+            }
+        }
+    }
+
+}
+

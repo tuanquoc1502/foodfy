@@ -5,7 +5,7 @@ import { Link } from "react-router-dom"
 import { productPopular } from "../../../services/dataIconPopular"
 import { listFilter } from "../../../services/listFilter"
 import productApi from '../../../api/productApi'
-import NotificationCart from "./NotificationCart"
+import NotificationCart from "../../NotificationCart/NotificationCart"
 
 import clsx from "clsx"
 import Select from "react-select"
@@ -45,12 +45,14 @@ const pages = [
 function Container({ props }) {
 
     const [nameProduct, setNameProduct] = useState('best-foods')
+    const [dataSearch, setDataSearch] = useState([])
     const [page, setPage] = useState(1)
 
-    const [dataSearch, setDataSearch] = useState([])
     const [data, setData] = useStore()
     const [cart, setCart] = useContext(CartContext)
+
     const [productFrame, setProductFrame] = useState(false)
+    const [showNotification, setShowNotification] = useState(false)
 
     // Api Product
     useEffect(() => {
@@ -103,7 +105,14 @@ function Container({ props }) {
     }
 
     const handleAddCart = (itemProduct) => {
+        
         setCart(prev => [...prev, itemProduct])
+
+        setShowNotification(true)
+
+        setTimeout(() => {
+            setShowNotification(false)
+        }, 1500)
     }
 
     const handleProductsByRow = () => {
@@ -242,6 +251,7 @@ function Container({ props }) {
 
                 </div>
             </div>
+            {showNotification && <NotificationCart />}
         </div >
     )
 }

@@ -82,6 +82,7 @@ function Header() {
     return (
         <div className={styles.header}>
             <div className={styles.navBar} style={backGroundHeader ? { backgroundColor: 'rgba(72, 49, 37, 0.9)' } : {}}>
+              
                 <div className={styles.wapperNavbarMobile}>
                     <div className={styles.iconNavBar} onClick={handleOpenNavBar}><GoThreeBars /></div>
                     <div className={styles.navbarMobile} style={navBar ? { display: 'block' } : { display: 'none' }}>
@@ -103,7 +104,9 @@ function Header() {
                             <Link to="/favorite" className={styles.textDecoration}>
                                 <li className={styles.menuItemMb}>Favorite</li>
                             </Link>
-                            <li className={styles.menuItemMb}>About</li>
+                            <Link to="/about" className={styles.textDecoration}>
+                                <li className={styles.menuItemMb}>About</li>
+                            </Link>
                         </ul>
 
                     </div>
@@ -121,7 +124,9 @@ function Header() {
                         <Link to="/favorite" className={styles.textDecoration}>
                             <li className={styles.menuItem}>Favorite</li>
                         </Link>
-                        <li className={styles.menuItem}>About</li>
+                        <Link to="/about" className={styles.textDecoration}>
+                            <li className={styles.menuItem}>About</li>
+                        </Link>
                     </ul>
                 </div>
 

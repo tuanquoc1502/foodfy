@@ -5,6 +5,7 @@ import GlobalStyle from './assets/GlobalStyle';
 import ShowProductById from './pages/showProductById/ShowProductById';
 import NotFound from './pages/notFound/NotFound';
 import FavoriteProduct from './pages/favoriteProduct/FavoriteProduct';
+import AboutUs from './pages/aboutUs/AboutUs';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
             <Route path="/" element={<HomePage />} />
             <Route path="/product/:id" element={<ShowProductById />} />
             <Route path="/favorite" element={<FavoriteProduct />} />
+            <Route path="/about" element={<AboutUs />} />
             <Route path='*' element={<HomePage />} />
           </Routes>
         </BrowserRouter>

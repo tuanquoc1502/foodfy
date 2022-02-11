@@ -40,19 +40,41 @@
         .menuList {
             display: flex;
             text-decoration: none;
+            margin-left: 10px;
 
             .menuItem {
+                position: relative;
                 font-size: 17px;
-                margin: 0 10px;
+                margin-right: 30px;
+                padding-bottom: 2px;
 
                 font-weight: 600;
 
                 color: white;
                 cursor: pointer;
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    left: 0%;
+                    right: 0%;
+                    margin-left: 0;
+                    background: #fed700;
+                    height: 3px;
+                    border-radius: 3px;
+                    width: 0px;
+                    transition: all 0.3s;
+                    bottom: -2px;
+                }
             }
 
             .textDecoration {
                 text-decoration: none;
+            }
+
+            .textDecoration:hover .menuItem::after {
+                width: 100%;
+                padding: 0 6px;
             }
         }
     }
@@ -473,6 +495,7 @@
         .cart {
             margin: 0 !important;
         }
+
         .pageName {
             margin: 0 !important;
         }

@@ -1,0 +1,71 @@
+.NotificationCart {
+    position: fixed;
+    top: 100px;
+    right: 0;
+    width: 380px;
+    height: 80px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background: white;
+    box-shadow: rgb(0 0 0 / 40%) 0px 1px 10px;
+
+    border-left: 3px solid #523a2c;
+    z-index: 10;
+    animation: fadeIn ease 0.3s, fadeOut linear 1s 0.8s forwards;
+
+    @keyframes fadeIn {
+        from {
+            transform: translateX(380px);
+        }
+        to {
+            transform: translateX(0);
+        }
+    }
+
+    @keyframes fadeOut {
+        to {
+            opacity: 0;
+        }
+    }
+
+    .iconNotification {
+        margin-left: 20px;
+        svg {
+            color: white;
+            font-size: 25px;
+            background: green;
+            padding: 2px;
+            border-radius: 50%;
+        }
+    }
+
+    .message {
+        h2 {
+            font-size: 17px;
+            font-weight: 700;
+            color: green;
+        }
+
+        span {
+            font-size: 15px;
+            line-height: 28px;
+        }
+    }
+
+    .iconOffNotification {
+        margin-right: 20px;
+        padding: 3px;
+        cursor: pointer;
+
+        &:hover {
+            opacity: 0.6;
+        }
+
+        svg {
+            font-size: 25px;
+        }
+    }
+}

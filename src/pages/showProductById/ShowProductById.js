@@ -1,19 +1,20 @@
-import clsx from "clsx";
 import { useEffect, useRef, useState } from "react";
 import { useParams } from "react-router-dom";
+import { useStore } from "../../store";
+import clsx from "clsx";
 import Header from "../../components/layout/header/Header";
 import Footer from "../../components/layout/footer/Footer";
-import { useStore } from "../../store";
+import BackgroundSlider from "../../components/BackgroundSlider/BackgroundSlider";
 import styles from './ShowProductById.module.scss'
 
 import { MdAddShoppingCart } from 'react-icons/md'
 import { AiFillStar, AiOutlineTags } from 'react-icons/ai'
 import { BiPlus, BiMinus, BiCalendarCheck } from 'react-icons/bi'
 import { FcShipped } from 'react-icons/fc'
-import BackgroundSlider from "../../components/BackgroundSlider/BackgroundSlider";
-
 
 function ShowProductById() {
+
+
     const [data] = useStore()
     const { id } = useParams();
 
@@ -22,7 +23,7 @@ function ShowProductById() {
 
     const [quantily, setQuantily] = useState(1)
     const [price, setPrice] = useState(total)
-    
+
     const prevQuantily = useRef()
 
     useEffect(() => {
@@ -39,6 +40,10 @@ function ShowProductById() {
             setQuantily(prev => prev - 1)
             setPrice(prev => prev - total)
         }
+    }
+
+    const handleAddCart = () => {
+        
     }
 
     // Process the first letter of the output information
@@ -77,12 +82,12 @@ function ShowProductById() {
                         </div>
 
                         <div className={styles.eatOut}>{outputInformation}</div>
-                        <h1 className={styles.optionsTitle}>Choose your options</h1>
+                        <h1 className={styles.optionsTitle}>Offers for you</h1>
 
                         <ul className={styles.options}>
-                            <li><input type='radio' name='buyProduct' />Buy 2 get 15 percent off</li>
-                            <li><input type='radio' name='buyProduct' />Buy 3 get 25 percent off</li>
-                            <li><input type='radio' name='buyProduct' />Buy 5 get 50 percent off</li>
+                            <li>Buy 2 get 15 percent off</li>
+                            <li>Buy 3 get 25 percent off</li>
+                            <li>Buy 5 get 50 percent off</li>
                         </ul>
 
                         <div className={styles.order}>
@@ -93,7 +98,7 @@ function ShowProductById() {
                             <div className={styles.btnNext} onClick={btnIncreaseProduct}>
                                 <BiPlus />
                             </div>
-                            <div className={styles.addToCard}>
+                            <div className={styles.addToCard} onClick={handleAddCart}>
                                 <MdAddShoppingCart className={styles.cartIcon} />
                                 <span>ADD TO CART</span>
                             </div>
@@ -106,7 +111,6 @@ function ShowProductById() {
                         </div>
 
                     </div>
-
                 </div>
             </div>
             <Footer />

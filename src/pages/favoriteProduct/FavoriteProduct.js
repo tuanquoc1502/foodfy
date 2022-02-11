@@ -13,7 +13,7 @@ function FavoriteProduct() {
     let settings = {
         dots: false,
         infinite: true,
-        // autoplay: true,
+        autoplay: true,
         speed: 500,
         slidesToShow: 3,
         slidesToScroll: 1,
@@ -52,7 +52,8 @@ function FavoriteProduct() {
 
                 <div className={styles.backgroundSlider}>
                     <div className={styles.pageDescription}>
-                        <div className={styles.title}>Top most popular and favorite dishes at Foodfy</div>
+                        <div className={styles.title}>Top most popular and favorite dishes at Foodfy.</div>
+                        <h3 className={styles.subTitle}>We pride ourselves on making real food from the best ingredients</h3>
                     </div>
                 </div>
 
